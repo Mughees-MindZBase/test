@@ -10,8 +10,11 @@ import Image from "next/image";
 
 import exampleImage from "../images/blueStar.png";
 
-// Star Rating Component
-const StarRating = ({ rating }) => {
+interface StarRatingProps {
+  rating: number;
+}
+
+const StarRating = ({ rating }: StarRatingProps) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
     if (rating >= i + 1) {
